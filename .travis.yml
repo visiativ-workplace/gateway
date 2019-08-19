@@ -6,3 +6,4 @@ cache:
 
 script:
   - mvn -B clean install
+
