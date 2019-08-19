@@ -5,5 +5,7 @@ cache:
     - "$HOME/.m2"
 
 script:
+  - .travis/build.sh
   - mvn -B clean install
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin dregistry.devops.moovapps.com
 
