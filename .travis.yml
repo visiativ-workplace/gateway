@@ -1,5 +1,7 @@
 language: java
 
+jdk: openjdk11
+
 services:
   - 'docker'
 
@@ -13,7 +15,6 @@ before_script:
 
 script:
   - .travis/build.sh
-  - .travis/test.sh
 
 
 deploy:
