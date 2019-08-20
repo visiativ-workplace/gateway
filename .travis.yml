@@ -11,10 +11,9 @@ cache:
 
 
 install:
-  - echo "$(pwd)" # just do nothing
+  - pwd # just do nothing
 
 script:
-  - eval .travis/maven-informations.sh
   - .travis/build.sh
 
 

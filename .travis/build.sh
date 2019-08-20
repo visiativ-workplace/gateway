@@ -2,6 +2,7 @@
 
 set -e; # exit on first error
 
+source $(dirname "$0")/maven-informations.sh
 
 if [[ $TRAVIS_BRANCH = "develop"  ]]
 then
