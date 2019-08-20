@@ -15,6 +15,9 @@ then
   else
     mvn -B clean install
   fi
+else
+  echo "Not buildable branch"
+  exit 1
 fi
 
 cp target/${PROJECT_ARTIFACT_ID}-${PROJECT_VERSION}.jar src/docker/app.jar
