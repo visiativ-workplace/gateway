@@ -13,11 +13,8 @@ cache:
 install:
   - echo "$(pwd)" # just do nothing
 
-before_script:
-  - .travis/setup.sh
-  - source .travis/maven-informations.sh
-
 script:
+  - eval .travis/maven-informations.sh
   - .travis/build.sh
 
 
