@@ -8,6 +8,7 @@ cache:
     - "$HOME/.m2"
 
 before_script:
+  - .travis/setup.sh
   - source .travis/maven-informations.sh
 
 script:

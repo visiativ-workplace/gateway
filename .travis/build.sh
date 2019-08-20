@@ -16,7 +16,6 @@ then
   fi
 fi
 
-
 cp target/${PROJECT_ARTIFACT_ID}-${PROJECT_VERSION}.jar src/docker/app.jar
 
 docker build \
