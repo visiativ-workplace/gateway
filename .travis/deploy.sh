@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+rm ~/.docker/config.json
+
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin dregistry.devops.moovapps.com
 
 docker push dregistry.devops.moovapps.com/visiativ/process/${PROJECT_ARTIFACT_ID}:${PROJECT_VERSION}
