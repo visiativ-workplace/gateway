@@ -4,6 +4,21 @@ cache:
   directories:
     - "$HOME/.m2"
 
+before_script:
+  - source .travis/maven-informations.sh
+
 script:
   - .travis/build.sh
+  - .travis/test.sh
 
+
+deploy:
+  - provider: script
+    script: bash .travis/deploy.sh develop
+    on:
+      branch: develop
+  - provider: script
+    script: bash scripts/deploy.sh master
+    on:
+      tags: true
+      branch: master

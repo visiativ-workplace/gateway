@@ -7,3 +7,7 @@ export PROJECT_VERSION=$(mvn org.apache.maven.plugins:maven-help-plugin:3.1.0:ev
 echo -ne '#######################   (100%)\r'
 echo -ne '\n'
 
+echo "*********************************"
+echo "project.artifactId : ${PROJECT_ARTIFACT_ID}"
+echo "project.version : ${PROJECT_VERSION}"
+echo "*********************************"
