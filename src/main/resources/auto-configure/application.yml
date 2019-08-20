@@ -5,9 +5,7 @@ spring:
         healthCheckPath: /management/health
         instanceId: gateway:${spring.application.instance-id:${random.value}}
         service-name: gateway
-      config:
-        watch:
-          enabled: false
+
   security:
     oauth2:
       client:

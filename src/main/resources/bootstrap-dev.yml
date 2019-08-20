@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    consul:
+      host: consul
+      port: 8500
+      config:
+        watch:
+          enabled: true
+          delay: 100
