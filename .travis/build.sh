@@ -2,6 +2,8 @@
 
 set -e; # exit on first error
 
+source .travis/maven-informations.sh
+
 if [[ $TRAVIS_BRANCH = "develop"  ]]
 then
   mvn -B clean install
