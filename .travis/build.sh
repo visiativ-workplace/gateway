@@ -5,12 +5,12 @@ set -e; # exit on first error
 
 if [[ $TRAVIS_BRANCH = "develop"  ]]
 then
-  mvn -B clean deploy
+  mvn -B clean install
 elif [[ $TRAVIS_BRANCH = "master" ]]
 then
   if [[ -n $TRAVIS_TAG  ]]
   then
-    mvn -B clean deploy
+    mvn -B clean install
   else
     mvn -B clean install
   fi

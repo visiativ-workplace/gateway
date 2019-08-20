@@ -32,7 +32,7 @@ public class ConsulConfigurationAutoLoader implements ApplicationRunner {
 
   @Override
   public void run(ApplicationArguments args) throws Exception {
-    // the default is to check if
+    // TODO : make it more normalized
     System.out.println("auto load configuration");
 
     consulClient.setKVBinaryValue("microservices/gateway,auto-configure/data", IOUtils.toByteArray(
