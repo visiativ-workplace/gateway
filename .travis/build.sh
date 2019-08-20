@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e; # exit on first error
+#set -e; # exit on first error
 
 source $(dirname "$0")/maven-informations.sh
 
