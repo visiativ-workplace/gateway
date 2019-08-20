@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-#set -e; # exit on first error
-
-. maven-informations.sh
+set -e; # exit on first error
 
 if [[ $TRAVIS_BRANCH = "develop"  ]]
 then

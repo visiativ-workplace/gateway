@@ -14,6 +14,7 @@ install:
   - pwd # just do nothing
 
 script:
+  - source .travis/maven-informations.sh
   - .travis/build.sh
 
 
