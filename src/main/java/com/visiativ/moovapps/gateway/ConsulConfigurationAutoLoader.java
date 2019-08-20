@@ -21,20 +21,22 @@ import org.springframework.stereotype.Component;
 @Profile("auto-configure")
 public class ConsulConfigurationAutoLoader implements ApplicationRunner {
 
-	private ConsulProperties consulProperties;
-	private ConsulClient consulClient;
+  private ConsulProperties consulProperties;
+  private ConsulClient consulClient;
 
-	public ConsulConfigurationAutoLoader(ConsulProperties consulProperties, ConsulClient consulClient) {
-		this.consulProperties = consulProperties;
-		this.consulClient = consulClient;
-	}
+  public ConsulConfigurationAutoLoader(ConsulProperties consulProperties,
+      ConsulClient consulClient) {
+    this.consulProperties = consulProperties;
+    this.consulClient = consulClient;
+  }
 
-	@Override
-	public void run(ApplicationArguments args) throws Exception {
-		// the default is to check if
-		System.out.println("auto load configuration");
+  @Override
+  public void run(ApplicationArguments args) throws Exception {
+    // the default is to check if
+    System.out.println("auto load configuration");
 
-		consulClient.setKVBinaryValue("microservices/gateway,auto-configure/data", IOUtils.toByteArray(
-				ConsulConfigurationAutoLoader.class.getResourceAsStream("/auto-configure/application.yml")));
-	}
+    consulClient.setKVBinaryValue("microservices/gateway,auto-configure/data", IOUtils.toByteArray(
+        ConsulConfigurationAutoLoader.class
+            .getResourceAsStream("/auto-configure/application.yml")));
+  }
 }
