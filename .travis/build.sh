@@ -6,11 +6,13 @@ source .travis/maven-informations.sh
 
 if [[ $TRAVIS_BRANCH = "develop"  ]]
 then
+  # TODO : change it to deploy into private nexus (need security configuration)
   mvn -B clean install
 elif [[ $TRAVIS_BRANCH = "master" ]]
 then
   if [[ -n $TRAVIS_TAG  ]]
   then
+    # TODO : change it to deploy into private nexus (need security configuration)
     mvn -B clean install
   else
     mvn -B clean install
