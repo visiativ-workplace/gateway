@@ -3,8 +3,8 @@ spring:
     name: gateway
   cloud:
     consul:
-      host: ${CONSUL_HOST:consul}
-      port: ${CONSUL_PORT:8500}
+      host: ${CONSUL_HOST}
+      port: ${CONSUL_PORT}
       config:
         enabled: true
         prefix: microservices
